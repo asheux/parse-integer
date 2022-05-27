@@ -25,7 +25,7 @@ $ pip install -r requirements.txt
 - Run tests
 
 ```
-$ py.test --cov=app tests/
+$ py.test tests/
 ```
 
 - Run application
@@ -38,10 +38,20 @@ $ python3 run.py
 
 - On postman
 
-- [http://127.0.0.1:5000/api/v1/computations/](http://127.0.0.1:5000/api/v1/computations/)
+- [http://127.0.0.1:5000/api/v1/computations/{number}](http://127.0.0.1:5000/api/v1/computations/{number})
 
 - Using curl command
 
 ```
-$ curl -i http://127.0.0.1:5000/api/v1/computations/
+$ curl -i http://127.0.0.1:5000/api/v1/computations/{number}
+```
+
+- Run FrontEnd
+
+```
+### Please make sure your backend is running
+
+$ cd UI
+$ npm install
+$ npm start
 ```

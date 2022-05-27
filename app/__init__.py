@@ -5,6 +5,7 @@ import logging
 
 # external imports
 from flask import Flask, Blueprint
+from flask_cors import CORS
 from flask_restful import Resource, Api
 
 
@@ -16,6 +17,7 @@ def create_app(config_name):
     app = Flask(__name__)
 
     app.config.from_object(config_name)
+    CORS(app)
 
     app.register_blueprint(bp)
 
