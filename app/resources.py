@@ -16,11 +16,11 @@ class Computation(Resource):
         # instances 
         number = int(number)
         result = f'{number}'
-        if number % 5:
+        if number % 5 == 0:
             result = 'L'
-        if number % 7:
+        if number % 7 == 0:
             result = 'R'
-        if (number % 5) and (number % 7):
+        if (number % 5 == 0) and (number % 7 == 0):
             result = 'LR'
         return jsonify({'result': result})
         
