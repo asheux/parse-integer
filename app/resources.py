@@ -10,10 +10,18 @@ from . import api
 
 class Computation(Resource):
     """
-    Computations
+    Compute integers
     """
-    def get(self):
+    def get(self, number):
         # instances 
-        pass
-
-api.add_resource(GitProfile, '/computations/')
+        number = int(number)
+        result = f'{number}'
+        if number % 5:
+            result = 'L'
+        if number % 7:
+            result = 'R'
+        if (number % 5) and (number % 7):
+            result = 'LR'
+        return jsonify({'result': result})
+        
+api.add_resource(Computation, '/computations/<string:number>')
