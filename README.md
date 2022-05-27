@@ -1,5 +1,7 @@
 # Parse Integer
 
+![alt text](https://github.com/asheux/parse-integer/blob/main/images/parser.png?raw=true)
+
 ### Setup application
 
 - Clone repo
